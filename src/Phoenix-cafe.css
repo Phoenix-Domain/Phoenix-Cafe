@@ -1,5 +1,7 @@
 *{
     box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 :root{
@@ -320,4 +322,16 @@ footer a{
     height: 5px;
     margin:10px auto;
     border-radius: 5px;
+}
+
+.fab{
+    color: brown;
+    font-size: 30px;
+    margin: 10px;
+    transition: all 0.2s ease-in;
+}
+
+.fab:hover{
+    color: var(--font-color1);
+    transform: scale(1.2);
 }
