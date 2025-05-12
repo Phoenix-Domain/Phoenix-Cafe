@@ -12,6 +12,8 @@
     --font-family1: cursive;
     --font-family2: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
     --font-family3: Tahoma;
+    --font-family4: "Oleo Script", system-ui;
+  
 
 }
 body{
@@ -19,6 +21,7 @@ body{
     width:100vw;
     height:100vh;
 }
+
 p{
     line-height: 1.6;
 }
@@ -35,11 +38,18 @@ header{
 }
 
 #hero_navigation-bar_logo--image{
-    width:30px;
-    height:30px
+    width:60px;
+    height:60px
+}
+.hero_navigation-bar_logo--brand_name{
+    font-family: var(--font-family4);
+    font-weight: 800;
+    font-size: 35px;
+    color:rgb(236, 167, 77);
+    margin-left:10px;
 }
 
-.hero_navigation-bar_logo--brand_name, .hero_navigation-bar_links a{
+.hero_navigation-bar_links a{
     font-family:var(--font-family2);
     font-weight: 800;
     font-size:17px;
@@ -188,6 +198,19 @@ header{
     letter-spacing: 2px;
 }
 
+.menu_item_header{
+    font-family: var(--font-family3);
+    margin:10px 0;
+    color:var(--font-color2);
+}
+
+.menu_item_text{
+    font-family: var(--font-family2);
+    font-size: 20px;
+    margin:10px 0;
+    color:var(--font-color4);
+}
+
 .pics{
     width:150px;
     border-radius:50%;
@@ -203,7 +226,7 @@ header{
     margin:0 auto;
     text-align: center;
     width:200px;
-    height:300px;
+    height:auto;
     vertical-align: center;
 }
 .menu_items{
@@ -221,6 +244,13 @@ header{
     overflow: scroll;
 }
 
+.testimonial_article-name{
+    color:var(--font-color1);
+    font-family: var(--font-family2);
+    font-weight: bold;
+
+}
+
 .testimonials_article, .gallery_images{
     display:grid;
     grid-template-rows: 1fr 1fr;
@@ -228,13 +258,14 @@ header{
 }
 
 .testimonial_article{
-    margin:0 auto;
+    margin:10px auto;
 
 }
 
 .testimonial_article q{
     font-style:italic;
     margin:0 auto;
+    font-size: 18px;
 }
 
 #gallery,#contact{
@@ -257,13 +288,16 @@ header{
     display:flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 300px;
+    width: auto;
 }
 
 .contact_url_lists li{
     list-style-type:disc;
     margin:5px;
-
+    font-size:20px;
+    font-family: var(--font-family2);
+    font-weight: bold;
+    color:var(--font-color1);
 }
 
 form{
@@ -278,6 +312,7 @@ form input{
     border:1px solid var(--font-color1);
     box-shadow: -1px -1px 5px var(--font-color1);
     border-radius: 5px;
+    outline:none;
 }
 
 form textarea{
@@ -285,6 +320,7 @@ form textarea{
     border:1px solid var(--font-color1);
     box-shadow: -1px -1px 5px var(--font-color1);
     border-radius: 5px;
+    outline:none;
 }
 
 form button{
@@ -304,11 +340,12 @@ form button:hover{
 }
 
 footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width:100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     background-color: var(--font-color3);
     color:whitesmoke;
+    place-items: center;
 }
 
 footer a{
@@ -334,4 +371,78 @@ footer a{
 .fab:hover{
     color: var(--font-color1);
     transform: scale(1.2);
+}
+
+.dot{
+    font-size:30px;
+}
+
+.footer_text{
+    text-align: center;
+}
+
+.footer_link{
+    text-decoration: none;
+    color:brown;
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+.footer_link:hover{
+    color: var(--font-color2);
+}
+
+@media screen and (max-width: 768px){
+    .hero_navigation-bar_links{
+        display:none;
+    }
+    .hero_navigation-bar_logo{
+        width:100%;
+        justify-content: center;
+    }
+    #home{
+        flex-direction: column;
+        align-items: center;
+    }
+    .home_text{
+        width:100%;
+        text-align: center;
+    }
+    #about{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 480px){
+    
+    .home_text{
+        width:100%;
+        text-align: center;
+    }
+    #about{
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu_items{
+        grid-template-columns: 1fr;
+    }
+    .testimonials_article, .gallery_images{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 320px){
+    .home_text{
+        width:100%;
+        text-align: center;
+    }
+    #about{
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu_items{
+        grid-template-columns: 1fr;
+    }
+    .testimonials_article, .gallery_images{
+        grid-template-columns: 1fr;
+    }
 }
